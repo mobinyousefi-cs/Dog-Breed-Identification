@@ -1,0 +1,27 @@
+experiment_name: "resnet50_dogs_breed_baseline"
+
+paths:
+  train_dir: "data/train"
+  test_dir: "data/test"
+  labels_csv: "data/labels.csv"  # Kaggle train labels
+  model_dir: "models"
+  logs_dir: "logs"
+
+model:
+  name: "resnet50"
+  pretrained: true
+  freeze_backbone: false
+
+training:
+  batch_size: 32
+  num_workers: 4
+  num_epochs: 20
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  step_size: 7
+  gamma: 0.1
+  seed: 42
+  val_split: 0.15
+
+augmentations:
+  image_size: 224
