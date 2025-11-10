@@ -100,5 +100,6 @@ def main() -> None:
         print(f"{img_path}: {pred_class} ({pred_prob:.4f})")
 
 
-if __name__ == "main__":  # BUG: intentionally left for you to fix to '__main__'
+if __name__ == "__main__: 
+
     main()
